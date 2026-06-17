@@ -1,3 +1,4 @@
+本人小白以上全部文件全部为ai生成，目前亮度不可调，hdmi不能用，其他正常，如果不清楚就把全部文件喂给ai，他给你解决！！！！
 # OpenCore 1.0.4 — Dell Latitude 3301 macOS Sequoia 15
 
 > **适用机型**: Dell Latitude 3301 (i5-8265U, Intel UHD 620, macOS 15 Sequoia)  
@@ -31,7 +32,7 @@
 |------|------|------|
 | ✅ GPU 加速 | 正常 | 1536MB VRAM，Metal，H264/HEVC 硬解 |
 | ✅ 内屏显示 | 正常 | 1366×768 @ 60Hz，背光可调 |
-| ✅ HDMI 输出 | 正常 | 外接显示器 |
+| ❌  HDMI 输出 | 不能使用正常 | 外接显示器 |
 | ✅ WiFi | 正常 | itlwm 2.3.0 + HeliPort，需手动启动 HeliPort.app |
 | ✅ 音频 | 正常 | AppleALC，内置扬声器和耳机 |
 | ✅ 触摸板 | 正常 | VoodooI2C 多指手势 |
@@ -162,11 +163,7 @@ macOS 15 Sequoia 删除了 CFL 图形驱动（`AppleIntelCFLGraphics`），但�
 
 ### 关于亮度调节
 
-内屏亮度可以通过系统设置或 `Fn+F5/F6` 快捷键调节。`-igfxblt` 参数是 CFL 平台在 macOS 13.4+ 上正确初始化背光 PWM 寄存器的关键。
-
-> ⚠️ 不要使用 `-igfxblr`，该参数在 macOS 13.4+ 的 CFL 平台上会被编译器优化破坏，导致亮度无法调节。
-
----
+目前所有方案都不能亮度调节
 
 ## CPU 电源管理注意事项
 
